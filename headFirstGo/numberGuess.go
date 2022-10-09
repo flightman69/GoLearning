@@ -27,15 +27,14 @@ func main() {
 	target := rand.Intn(100)
 	fmt.Print("The Go God has choosen a number between 1 -100\n\n")
 	success := false
-	for x := 0; x < 10; x++ {
-		fmt.Print("You have ", 10-x, " chances to meet the GOd\n\n")
+	for x := 0; x < 5; x++ {
+		fmt.Print("You have ", 5-x, " chances to meet the GOd\n\n")
 		fmt.Print("Enter your guess: ")
 
 		reader := bufio.NewReader(os.Stdin)
 		input, _ := reader.ReadString('\n')
 		input = strings.TrimSpace(input)
 		guess, _ := strconv.Atoi(input)
-		fmt.Println(guess)
 
 		if guess == target {
 			success = true
